@@ -1,5 +1,7 @@
 # LAN Network Design and Configuration Project on Cisco Packet Tracer
 
+**> **🌐 **Language / Ngôn ngữ:** **[English](README.md)** | **[Tiếng Việt](README-vn.md)**
+
 This repository contains all device configuration source codes, the network topology simulation file (`.pkt`), and implementation guides for a medium-sized enterprise LAN network system. This project was conducted within the scope of the **Computer Security** course for the academic year 2026 - 2027.
 
 ## 📊 Project Overview

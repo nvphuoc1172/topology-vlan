@@ -1,5 +1,7 @@
 # Đồ án Thiết lập và Cấu hình Mạng LAN trên Cisco Packet Tracer
 
+**> **🌐 **Language / Ngôn ngữ:** **[English](README.md)** | **[Tiếng Việt](README-vn.md)** 
+
 Repository này chứa toàn bộ mã nguồn cấu hình thiết bị, file mô phỏng sơ đồ mạng (`.pkt`) và tài liệu hướng dẫn triển khai hệ thống mạng LAN doanh nghiệp quy mô vừa. Dự án được thực hiện trong khuôn khổ môn học **An ninh máy tính**, năm học 2026 - 2027.
 
 ## 📊 Tổng quan dự án
