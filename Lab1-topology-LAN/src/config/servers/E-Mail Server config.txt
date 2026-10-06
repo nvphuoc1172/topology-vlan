@@ -1,0 +1,20 @@
+ip_config:
+    ipv4: 192.168.100..222
+    mask: 255.255.255.0
+    default_gateway: 192.168.100.1
+    dns: 10.50.50.253
+services:
+    http:
+        http: on
+        https: on
+    ftp:
+        serivce: on
+        users:
+            id: 1
+                username: cisco
+                password: cisco
+                permission: rwdnl
+            id: 2
+                username: lab1
+                password: lab1
+                permission: rwdl

@@ -1,0 +1,9 @@
+ip_config:
+    ipv4: 192.168.100.111
+    mask: 255.255.255.0
+    default_gateway: 192.168.100.1
+    dns: 10.50.50.253
+services:
+    http:
+        http: on
+        https: on

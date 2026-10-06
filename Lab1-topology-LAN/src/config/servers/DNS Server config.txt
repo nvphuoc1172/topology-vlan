@@ -1,0 +1,21 @@
+ip_config:
+    ipv4: 10.50.50.253
+    mask: 255.255.255.0
+    default_gateway: 10.50.50.1
+    dns: 10.50.50.253
+services:
+    http:
+        http: on
+        https: on
+    dns:
+        service: on
+        address:
+            id: 0
+                name: mail.xyz.net
+                type: a
+                address: 192.168.100.222
+            id: 1
+                name: www.xyz.net
+                type: a
+                address: 192.168.100.111
+                

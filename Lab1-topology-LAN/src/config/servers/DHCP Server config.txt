@@ -1,0 +1,107 @@
+ip_config:
+    ipv4: 10.50.50.254
+    mask: 255.255.255.0
+    default_gateway: 10.50.50.1
+    dns: 10.50.50.253
+services:
+    http:
+        http: on
+        https: on
+    dhcp:
+        interface: fa/0
+        service: on
+        pools:
+            id: 0
+                name: serverPool
+                default_gateway: 10.50.50.1
+                dns_server: 10.50.50.253
+                start_ip: 10.50.50.2
+                mask: 255.255.255.0
+            
+            # --- BUILDING 1 POOLS (VLAN 10 - 16) ---
+            id: 2
+                name: vlan10_pool
+                default_gateway: 172.16.10.1
+                dns_server: 10.50.50.253
+                start_ip: 172.16.10.10
+                mask: 255.255.255.0
+            id: 3
+                name: vlan11_pool
+                default_gateway: 172.16.11.1
+                dns_server: 10.50.50.253
+                start_ip: 172.16.11.10
+                mask: 255.255.255.0
+            id: 4
+                name: vlan12_pool
+                default_gateway: 172.16.12.1
+                dns_server: 10.50.50.253
+                start_ip: 172.16.12.10
+                mask: 255.255.255.0
+            id: 5
+                name: vlan13_pool
+                default_gateway: 172.16.13.1
+                dns_server: 10.50.50.253
+                start_ip: 172.16.13.10
+                mask: 255.255.255.0
+            id: 6
+                name: vlan14_pool
+                default_gateway: 172.16.14.1
+                dns_server: 10.50.50.253
+                start_ip: 172.16.14.10
+                mask: 255.255.255.0
+            id: 7
+                name: vlan15_pool
+                default_gateway: 172.16.15.1
+                dns_server: 10.50.50.253
+                start_ip: 172.16.15.10
+                mask: 255.255.255.0
+            id: 8
+                name: vlan16_pool
+                default_gateway: 172.16.16.1
+                dns_server: 10.50.50.253
+                start_ip: 172.16.16.10
+                mask: 255.255.255.0
+
+            # --- BUILDING 2 POOLS (VLAN 20 - 26) ---
+            id: 9
+                name: vlan20_pool
+                default_gateway: 172.20.20.1
+                dns_server: 10.50.50.253
+                start_ip: 172.20.20.10
+                mask: 255.255.255.0
+            id: 10
+                name: vlan21_pool
+                default_gateway: 172.20.21.1
+                dns_server: 10.50.50.253
+                start_ip: 172.20.21.10
+                mask: 255.255.255.0
+            id: 11
+                name: vlan22_pool
+                default_gateway: 172.20.22.1
+                dns_server: 10.50.50.253
+                start_ip: 172.20.22.10
+                mask: 255.255.255.0
+            id: 12
+                name: vlan23_pool
+                default_gateway: 172.20.23.1
+                dns_server: 10.50.50.253
+                start_ip: 172.20.23.10
+                mask: 255.255.255.0
+            id: 13
+                name: vlan24_pool
+                default_gateway: 172.20.24.1
+                dns_server: 10.50.50.253
+                start_ip: 172.20.24.10
+                mask: 255.255.255.0
+            id: 14
+                name: vlan25_pool
+                default_gateway: 172.20.25.1
+                dns_server: 10.50.50.253
+                start_ip: 172.20.25.10
+                mask: 255.255.255.0
+            id: 15
+                name: vlan26_pool
+                default_gateway: 172.20.26.1
+                dns_server: 10.50.50.253
+                start_ip: 172.20.26.10
+                mask: 255.255.255.0

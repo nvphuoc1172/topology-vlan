@@ -1,0 +1,167 @@
+!
+version 17.12.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname CoreSW
+!
+!
+no profinet
+!
+!
+!
+!
+!
+!
+no ip cef
+ip routing
+!
+no ipv6 cef
+!
+!
+!
+ptp clock transparent domain 0 profile default
+license boot level ipbasek9
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Port-channel11
+ no switchport
+ ip address 10.10.20.1 255.255.255.0
+!
+interface Port-channel12
+ no switchport
+ ip address 10.10.30.1 255.255.255.0
+!
+interface Port-channel13
+ no switchport
+ ip address 10.10.40.1 255.255.255.0
+!
+interface GigabitEthernet1/0/1
+ no switchport
+ no ip address
+ channel-protocol lacp
+ channel-group 11 mode active
+!
+interface GigabitEthernet1/0/2
+ no switchport
+ no ip address
+ channel-protocol lacp
+ channel-group 11 mode active
+!
+interface GigabitEthernet1/0/3
+ no switchport
+ no ip address
+ channel-group 12 mode active
+!
+interface GigabitEthernet1/0/4
+ no switchport
+ no ip address
+ channel-group 12 mode active
+!
+interface GigabitEthernet1/0/5
+ no switchport
+ no ip address
+ channel-group 13 mode active
+!
+interface GigabitEthernet1/0/6
+ no switchport
+ no ip address
+ channel-group 13 mode active
+!
+interface GigabitEthernet1/0/7
+ no switchport
+ ip address 10.10.10.2 255.255.255.0
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+!
+interface GigabitEthernet1/0/25
+!
+interface GigabitEthernet1/0/26
+!
+interface GigabitEthernet1/0/27
+!
+interface GigabitEthernet1/0/28
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ router-id 1.1.1.1
+ log-adjacency-changes
+ network 10.10.20.0 0.0.0.255 area 0
+ network 10.10.30.0 0.0.0.255 area 0
+!
+ip classless
+ip route 10.50.50.0 255.255.255.0 10.10.40.2 
+ip route 0.0.0.0 0.0.0.0 10.10.10.1 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+!
+end
+

@@ -1,0 +1,6 @@
+Building 1:
+    VTP Domain: HCMUS1
+    VTP Password: 123
+Building 2:
+    VTP Domain: HCMUS2
+    VTP Password: 123

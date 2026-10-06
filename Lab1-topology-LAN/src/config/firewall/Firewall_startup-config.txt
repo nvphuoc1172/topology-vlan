@@ -1,0 +1,77 @@
+: Saved
+: Written by enable_15 at 12:21:50 UTC Mar 1 1993
+: Call-home enabled from prompt by enable_15 at 12:21:50 UTC Mar 1 1993
+:
+: Serial Number : JMX15360YN0-
+: Hardware:   ISA-3000-2C2F, 8192 MB RAM, CPU Atom C2000 series 1250 MHz, 1 CPU(4 cores)
+:
+ASA Version 9.16(2)3
+!
+firewall transparent
+hostname Firewall
+!
+interface Management1/1
+ nameif management
+ security-level 100
+ ip address 192.168.1.1 255.255.255.0
+ shutdown
+!
+interface GigabitEthernet1/1
+ nameif dmz
+ security-level 50
+ ip address 192.168.100.1 255.255.255.0
+!
+interface GigabitEthernet1/2
+ nameif outside
+ security-level 0
+ ip address 192.168.200.1 255.255.255.0
+!
+interface GigabitEthernet1/3
+ nameif inside0
+ security-level 100
+ ip address 10.10.10.1 255.255.255.0
+!
+interface GigabitEthernet1/4
+ nameif inside2
+ security-level 100
+ no ip address
+ shutdown
+!
+!
+route outside 0.0.0.0 0.0.0.0 192.168.200.2 1
+route inside0 172.16.0.0 255.255.0.0 10.10.10.2 1
+route inside0 172.20.0.0 255.255.0.0 10.10.10.2 1
+route inside0 10.10.20.0 255.255.255.0 10.10.10.2 1
+route inside0 10.10.30.0 255.255.255.0 10.10.10.2 1
+route inside0 10.10.40.0 255.255.255.0 10.10.10.2 1
+route inside0 10.50.50.0 255.255.255.0 10.10.10.2 1
+!
+access-list outside1_access_in extended permit ip any any
+access-list inside1_access_in extended permit ip any any
+access-list outside2_access_in extended permit ip any any
+access-list inside2_access_in extended permit ip any any
+access-list dmz-access-in extended permit ip any any
+!
+!
+access-group outside1_access_in in interface outside1
+access-group inside1_access_in in interface inside1
+access-group outside2_access_in in interface outside2
+access-group inside2_access_in in interface inside2
+access-group dmz-access-in in interface dmz
+!
+!
+!
+!
+!
+telnet timeout 5
+ssh timeout 5
+!
+dhcpd address 192.168.1.5-192.168.1.254 management
+dhcpd lease 86400 interface management
+dhcpd address 192.168.1.5-192.168.1.254 management
+dhcpd enable management
+!
+!
+!
+!
+
