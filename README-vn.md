@@ -1,6 +1,6 @@
 # Đồ án Thiết lập và Cấu hình Mạng LAN trên Cisco Packet Tracer
 
-**> **🌐 **Language / Ngôn ngữ:** **[English](README.md)** | **[Tiếng Việt](README-vn.md)** 
+**> **🌐 **Language / Ngôn ngữ:** **[English](README.md)** | **[Tiếng Việt](README-vn.md)**
 
 Repository này chứa toàn bộ mã nguồn cấu hình thiết bị, file mô phỏng sơ đồ mạng (`.pkt`) và tài liệu hướng dẫn triển khai hệ thống mạng LAN doanh nghiệp quy mô vừa. Dự án được thực hiện trong khuôn khổ môn học **An ninh máy tính**, năm học 2026 - 2027.
 
@@ -184,18 +184,18 @@ ip nat inside source list 1 pool PAT-POOL overload
 ## 🗂️ Cấu trúc thư mục Repository
 
 ```text
-├── backups/            # Contains backup files or older configuration versions
-├── docs/               # Contains project report documents (PDF/Word)
-├── src/                # Main source code directory of the project
-│   └── config/         # Stores detailed configuration files for each network device
-│       ├── firewall/   # Configurations for the ISA 3000 Firewall
-│       ├── l2-sws/     # Configurations for Layer 2 Access Switches (Acc-SW1 to Acc-SW6)
-│       ├── l3-sws/     # Configurations for CoreSW and Layer 3 Distribution Switches
-│       ├── other/      # Configurations for auxiliary devices (e.g., Multilayer Switch 0)
-│       ├── routers/    # Configurations for the Gateway Router and ISP Router
-│       └── servers/    # Text/YAML files saving IP allocation and service details for Servers
-├── topology/           # Contains the Packet Tracer network simulation file (.pkt)
-├── .gitignore          # Configuration file to ignore unnecessary files when pushing to Git
-├── README-vn.md        # Project documentation and guide in Vietnamese
-└── README.md           # Project documentation and guide in English (Default)
+├── backups/            # Chứa các file cấu hình dự phòng hoặc phiên bản cũ
+├── docs/               # Chứa các file tài liệu báo cáo PDF/Word
+├── src/                # Thư mục mã nguồn chính của dự án
+│   └── config/         # Lưu trữ file cấu hình chi tiết của từng thiết bị
+│       ├── firewall/   # Cấu hình cho Firewall ISA 3000
+│       ├── l2-sws/     # Cấu hình cho các Access Switches Layer 2 (Acc-SW1 đến Acc-SW6)
+│       ├── l3-sws/     # Cấu hình cho CoreSW và các Distribution Switches Layer 3
+│       ├── other/      # Cấu hình cho các thiết bị phụ trợ khác (như Multilayer Switch 0)
+│       ├── routers/    # Cấu hình cho Gateway Router và ISP Router
+│       └── servers/    # File text/yaml lưu thông tin IP và dịch vụ của các Server
+├── topology/           # Chứa file mô phỏng sơ đồ mạng (.pkt) của Packet Tracer
+├── .gitignore          # File cấu hình bỏ qua các tệp không cần thiết khi push lên Git
+├── README-vn.md        # Tài liệu hướng dẫn dự án bằng tiếng Việt
+└── README.md           # Tài liệu hướng dẫn dự án bằng tiếng Anh (Mặc định)
 ```

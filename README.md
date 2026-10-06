@@ -184,11 +184,18 @@ To check the operational status of network services, access the command-line int
 ## 🗂️ Repository Directory Structure
 
 ```text
-├── docs/               # Contains report documentation files (PDF/Word)
-├── src/                # Stores device configuration source code files (.txt)
-│   ├── CoreSW_config.txt
-│   ├── DistSW1_config.txt
-│   └── GatewayRouter_config.txt
-├── topology/           # Contains the Packet Tracer lab file (.pkt)
-└── README.md           # Project summary and documentation file
+├── backups/            # Contains backup files or older configuration versions
+├── docs/               # Contains project report documents (PDF/Word)
+├── src/                # Main source code directory of the project
+│   └── config/         # Stores detailed configuration files for each network device
+│       ├── firewall/   # Configurations for the ISA 3000 Firewall
+│       ├── l2-sws/     # Configurations for Layer 2 Access Switches (Acc-SW1 to Acc-SW6)
+│       ├── l3-sws/     # Configurations for CoreSW and Layer 3 Distribution Switches
+│       ├── other/      # Configurations for auxiliary devices (e.g., Multilayer Switch 0)
+│       ├── routers/    # Configurations for the Gateway Router and ISP Router
+│       └── servers/    # Text/YAML files saving IP allocation and service details for Servers
+├── topology/           # Contains the Packet Tracer network simulation file (.pkt)
+├── .gitignore          # Configuration file to ignore unnecessary files when pushing to Git
+├── README-vn.md        # Project documentation and guide in Vietnamese
+└── README.md           # Project documentation and guide in English (Default)
 ```
