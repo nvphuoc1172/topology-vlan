@@ -184,6 +184,7 @@ To check the operational status of network services, access the command-line int
 ## 🗂️ Repository Directory Structure
 
 ```text
+Lab1
 ├── backups/            # Contains backup files or older configuration versions
 ├── docs/               # Contains project report documents (PDF/Word)
 ├── src/                # Main source code directory of the project

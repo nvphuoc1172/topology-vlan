@@ -184,6 +184,7 @@ ip nat inside source list 1 pool PAT-POOL overload
 ## 🗂️ Cấu trúc thư mục Repository
 
 ```text
+Lab1
 ├── backups/            # Chứa các file cấu hình dự phòng hoặc phiên bản cũ
 ├── docs/               # Chứa các file tài liệu báo cáo PDF/Word
 ├── src/                # Thư mục mã nguồn chính của dự án
